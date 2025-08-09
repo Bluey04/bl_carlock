@@ -1,5 +1,5 @@
-Vehicle Lock System (bl_carlock)
-A customizable vehicle lock system for FiveM, supporting QBCore, QBX-Core, ESX frameworks, and QS Inventory. This system allows players to lock and unlock vehicles using commands, keybinds, or targeting actions.
+Vehicle Lock System
+A customizable vehicle lock system for FiveM, supporting QBCore, ESX frameworks, and QS Inventory. This system allows players to lock and unlock vehicles using commands, keybinds, or targeting actions.
 
 -Features-
 Framework Compatibility: Supports QBCore, and ESX frameworks.
