@@ -82,13 +82,14 @@ Your donations will help ensure continued updates and support for the community!
 ## Support
 If you encounter any issues or need help setting up the script, feel free to:
 Open an issue on the GitHub repository.
+Join Our Discord https://discord.gg/9fuJWEGSmK
 Join the community discussion on FiveM forums.
 Ask for help in relevant FiveM Discord servers.
 Iâ€™ll do my best to help you solve any issues you might face.
 
 ## Changelog
-Version 1.0.0 (2025-05-21)
-Initial release with support for QBCore, QBX-Core, and ESX frameworks.
+Version 1.0.0 (2025-08-10)
+Initial release with support for QBCore, and ESX frameworks.
 Vehicle lock/unlock with command, keybind, and targeting options.
 Key item system to lock/unlock vehicles.
 Animations and sounds for vehicle lock/unlock events.
@@ -103,5 +104,5 @@ qb-target and ox_target for providing excellent targeting systems that make this
 FiveM community for continuous feedback, support, and development.
 
 ## Contact
-For any questions, collaborations, or concerns, feel free to reach out to me directly via pacificnetworkss@gmail.com or through the project's GitHub page.
+For any questions, collaborations, or concerns, feel free to reach out to me directly via Discord @Bluey0577 or through the project's GitHub page.
 
