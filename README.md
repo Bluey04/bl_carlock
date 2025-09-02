@@ -32,7 +32,7 @@ git clone https://github.com/yourusername/bl_carlock.git
 
 ### 2. Install Required Dependency
 This script requires **bl_lib**.  
-1. Download or clone [bl_lib](https://github.com/yourusername/bl_lib).  
+1. Download or clone [bl_lib](https://github.com/Bluey04/bl_lib).  
 2. Place it in your `resources/[bl]` folder.  
 3. Add to `server.cfg` **before** `bl_carlock`:
 ```
@@ -81,12 +81,6 @@ With targeting (qb-target / ox_target):
 
 ## 📄 License
 Licensed under the **MIT License** — free to use, modify, and share with credit.
-
----
-
-## 💳 Donations
-If you’d like to support development:  
-[PayPal — Pacific Networks](https://paypal.me/PacificNetworkss?country.x=AU&locale.x=en_AU)
 
 ---
 
