@@ -1,3 +1,19 @@
+
+-- ====== Discord Logging Helper ======
+local function sendToDiscord(title, description, color)
+    if not Config.DiscordWebhook or Config.DiscordWebhook == "" then return end
+    local embed = {{
+        ["title"] = title or (Config.Discord and Config.Discord.action_title or "Car Lock"),
+        ["description"] = description,
+        ["color"] = color or (Config.Discord and Config.Discord.default_color or 16776960),
+        ["footer"] = {{ ["text"] = (Config.Discord and Config.Discord.footer or "Carlock") .. " | " .. os.date("%Y-%m-%d %H:%M:%S") }}
+    }}
+    PerformHttpRequest(Config.DiscordWebhook, function() end, 'POST', json.encode({
+        username = Config.Discord and Config.Discord.username or "Car Lock Logs",
+        embeds = embed
+    }), { ['Content-Type'] = 'application/json' })
+end
+
 -- bl_carlock/server/main.lua (unified: QBCore + ESX + Standalone)
 
 -- ====== Safe Config defaults (in case Config.lua is missing some keys) ======
@@ -148,8 +164,27 @@ end)
 -- ====== Lock toggle relay (stateless) ======
 RegisterNetEvent('bl_carlock:server:toggleLock', function(plate, vehicleNet, newLockState)
     local src = source
-    -- Optional: You could re-check keys here server-side too
-    TriggerClientEvent('bl_carlock:client:setLockState', -1, newLockState, vehicleNet)
+    local playerName = GetPlayerName(src) or "unknown"
+    local action = newLockState and "Unlocked" or "Locked"
+
+    local hasKey = false
+    if hasVehicleKeyDB then
+        hasKey = hasVehicleKeyDB(src, plate)
+    else
+        -- Standalone: always allow locking/unlocking for owned vehicle (or disable DB check)
+        hasKey = true
+    end
+
+    if hasKey then
+        TriggerClientEvent('bl_carlock:client:setLockState', -1, newLockState, vehicleNet)
+        sendToDiscord(
+            Config.Discord.action_title,
+            ("[%s] %s (%s) %s vehicle"):format(plate, playerName, src, action),
+            newLockState and Config.Discord.unlock_color or Config.Discord.lock_color
+        )
+    else
+        TriggerClientEvent('bl_carlock:client:noKeys', src)
+    end
 end)
 
 -- ====== Optional stubs for key grant from shops (non-persistent by default) ======
