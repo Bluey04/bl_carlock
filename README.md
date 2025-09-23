@@ -1,4 +1,4 @@
-# BL CarLock
+# BL CarLock V1
 
 A customizable vehicle lock system for FiveM, supporting **QBCore**, **QBX**, and **ESX** frameworks.  
 Allows players to lock/unlock vehicles via commands, keybinds, or targeting actions.
@@ -92,9 +92,7 @@ Licensed under the **MIT License** — free to use, modify, and share with credi
 ---
 
 ## 📜 Changelog
-**v1.0.0** *(2025-08-10)*  
-- Initial release  
-- Lock/unlock via command, keybind, or targeting  
-- Key item system  
-- Animations, sounds, flashing lights  
-- Multi-language support  
+**v1.1.0** *(2025-09-23)*  
+- Added **bl_notify** support  
+- Added **Discord logging** for lock/unlock events  
+- Removed Key item system  
