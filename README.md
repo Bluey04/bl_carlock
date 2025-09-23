@@ -69,8 +69,7 @@ Additional options:
 
 ## 🛠 Usage
 - `/lock` — Lock/Unlock vehicle  
-- **L** — Default keybind to lock/unlock  
-- `/trunk`, `/hood`, `/doors` — Control specific parts  
+- **L** — Default keybind to lock/unlock    
 
 With targeting (qb-target / ox_target):
 - **Lock Vehicle**  
@@ -93,6 +92,6 @@ Licensed under the **MIT License** — free to use, modify, and share with credi
 
 ## 📜 Changelog
 **v1.1.0** *(2025-09-23)*  
-- Added **bl_notify** support  
+- Added **BL NOTIFY** support  
 - Added **Discord logging** for lock/unlock events  
 - Removed Key item system  
