@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'BL SCRIPTS'
 description 'Vehicle Lock System (QB/ESX/Standalone)'
-version '1.0.0'
+version '1.0.1'
 
 lua54 'yes'
 
