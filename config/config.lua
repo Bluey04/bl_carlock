@@ -12,7 +12,7 @@ Config.Framework = Config.Standalone and nil or "qbcore" -- or "esx"
 Config.Inventory = "ox"
 
 -- Notify System
--- Supported: "bl" "qb", "okok", "mythic", "ox", "print"
+-- Supported: "bl_notify" "qb", "okok", "mythic", "ox", "print"
 Config.Notify = "bl_notify"
 
 -- Lock Settings
