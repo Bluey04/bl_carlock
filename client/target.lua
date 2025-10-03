@@ -1,9 +1,9 @@
 local function AddVehicleTargets()
-    -- Add target options for QB framework
+    
     if Config.Target == "qb" then
         exports['qb-target']:AddGlobalVehicle({
             options = {
-                -- Lock Vehicle Option
+               
                 {
                     icon = "fas fa-lock",
                     label = Locales['target_lock'],
@@ -11,7 +11,7 @@ local function AddVehicleTargets()
                         TriggerServerEvent("bl_carlock:server:toggleLock", GetVehicleNumberPlateText(entity), VehToNet(entity))
                     end
                 },
-                -- Unlock Vehicle Option
+                
                 {
                     icon = "fas fa-unlock",
                     label = Locales['target_unlock'],
@@ -19,7 +19,7 @@ local function AddVehicleTargets()
                         TriggerServerEvent("bl_carlock:server:toggleLock", GetVehicleNumberPlateText(entity), VehToNet(entity))
                     end
                 },
-                -- Give Key Option
+                
                 {
                     icon = "fas fa-key",
                     label = Locales['target_give_key'],
@@ -36,7 +36,7 @@ local function AddVehicleTargets()
             distance = 2.5
         })
 
-    -- Add target options for ox_target
+    
     elseif Config.Target == "ox" then
         exports.ox_target:addGlobalVehicle({
             {
@@ -69,13 +69,13 @@ local function AddVehicleTargets()
     end
 end
 
--- This ensures that target is only added once the network session is active
+
 CreateThread(function()
     while not NetworkIsSessionStarted() do Wait(100) end
     AddVehicleTargets()
 end)
 
--- Function to get the closest player
+
 function GetClosestPlayer()
     local players = GetActivePlayers()
     local closestPlayer, closestDistance = -1, 999.0
@@ -96,7 +96,7 @@ function GetClosestPlayer()
     return closestPlayer, closestDistance
 end
 
--- Notification function (use localized message based on config)
+
 function Notify(msg, type)
     local t = type or "inform"
 
@@ -116,3 +116,4 @@ function Notify(msg, type)
         print("[Notify][" .. t .. "]: " .. msg)
     end
 end
+
