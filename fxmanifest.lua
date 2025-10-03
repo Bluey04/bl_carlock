@@ -10,21 +10,21 @@ lua54 'yes'
 shared_script '@ox_lib/init.lua'
 
 shared_scripts {
-    'config/config.lua',  -- Your configuration file
-    'locales/en.lua',      -- Language/Localization file
-    '@bl_lib/lib.lua',     -- Libary of Functions
+    'config/config.lua',  
+    'locales/en.lua',      
+    '@bl_lib/lib.lua',     
 }
 
 client_scripts {
-    'client/main.lua',    -- Main client script
-    'client/target.lua',   -- (If you are using target interactions)
+    'client/main.lua',    
+    'client/target.lua',   
 }
 
 server_scripts {
-    '@oxmysql/lib/MySQL.lua',  -- Database support (if using MySQL)
-    'server/main.lua',           -- Main server script
+    '@oxmysql/lib/MySQL.lua',  
+    'server/main.lua',           
 }
 
 dependencies {
-    'bl_lib',           -- Required for custom functionality
+    'bl_lib',           
 }
