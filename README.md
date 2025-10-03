@@ -27,12 +27,12 @@ Allows players to lock/unlock vehicles via commands, keybinds, or targeting acti
 ### 1. Download the Resource
 Clone or download the latest release:
 ```bash
-git clone https://github.com/yourusername/bl_carlock.git
+git clone https://github.com/blscriptss/bl_carlock_v1.git
 ```
 
 ### 2. Install Required Dependency
 This script requires **bl_lib**.  
-1. Download or clone [bl_lib](https://github.com/Bluey04/bl_lib).  
+1. Download or clone [bl_lib](https://github.com/blscriptss/bl_lib).  
 2. Place it in your `resources/[bl]` folder.  
 3. Add to `server.cfg` **before** `bl_carlock`:
 ```
