@@ -14,9 +14,9 @@ local function sendToDiscord(title, description, color)
     }), { ['Content-Type'] = 'application/json' })
 end
 
--- bl_carlock/server/main.lua (unified: QBCore + ESX + Standalone)
 
--- ====== Safe Config defaults (in case Config.lua is missing some keys) ======
+
+-- ====== Safe Config defaults ======
 Config = Config or {}
 Config.RequireKeyItem = Config.RequireKeyItem ~= nil and Config.RequireKeyItem or false
 Config.KeyItemName = Config.KeyItemName or 'vehiclekey'
@@ -132,7 +132,7 @@ local function checkHasVehicleKey(src)
     elseif Framework.type == 'esx' then
         return hasKeyItem_esx(src)
     else
-        -- Standalone: no inventory system, allow if keys not required; here they are required so deny
+        -- Standalone --
         return false
     end
 end
@@ -148,20 +148,20 @@ local function registerQBCoreCallback()
     end
 end
 
--- Delay a moment to ensure detection finished then register callback if QB
+
 CreateThread(function()
     Wait(500)
     registerQBCoreCallback()
 end)
 
--- ====== Fallback request/response for ESX + Standalone (and also works for QB) ======
+-- ====== Fallback ======
 RegisterNetEvent('bl_carlock:server:hasVehicleKeyReq', function(token)
     local src = source
     local hasKey = checkHasVehicleKey(src)
     TriggerClientEvent('bl_carlock:client:hasVehicleKeyResp', src, token, hasKey)
 end)
 
--- ====== Lock toggle relay (stateless) ======
+-- ====== Lock toggle relay ======
 RegisterNetEvent('bl_carlock:server:toggleLock', function(plate, vehicleNet, newLockState)
     local src = source
     local playerName = GetPlayerName(src) or "unknown"
