@@ -1,4 +1,3 @@
--- bl_carlock/client/main.lua (unified: QBCore + ESX + Standalone)
 
 -- ====== Safe Config defaults ======
 Config = Config or {}
