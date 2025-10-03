@@ -1,8 +1,8 @@
 Locales = {}
 
 -- Vehicle Lock/Unlock
-Locales['vehicle_locked'] = "🔒 Véhicule verrouillé."
-Locales['vehicle_unlocked'] = "🔓 Véhicule déverrouillé."
+Locales['vehicle_locked'] = "Véhicule verrouillé."
+Locales['vehicle_unlocked'] = "Véhicule déverrouillé."
 Locales['not_driver'] = "Vous devez être le conducteur pour faire cela."
 Locales['no_vehicle_nearby'] = "Aucun véhicule à proximité."
 Locales['not_your_vehicle'] = "Vous n'avez pas les clés de ce véhicule."
@@ -38,3 +38,4 @@ Locales['player_gave_key'] = "Vous avez donné les clés de ce véhicule."
 -- Debugging (optional for debugging purposes in development)
 Locales['debug_vehicle_locked'] = "Véhicule verrouillé avec succès."
 Locales['debug_vehicle_unlocked'] = "Véhicule déverrouillé avec succès."
+
