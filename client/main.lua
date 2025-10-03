@@ -17,7 +17,7 @@ Locales = Locales or {
     ['no_keys'] = "You don't have the keys."
 }
 
--- ====== Framework detection (client) ======
+-- ====== Framework detection ======
 local Framework = { type = 'standalone', QBCore = nil, ESX = nil }
 
 local function tryGetQBCore()
@@ -133,7 +133,7 @@ function TryToggleLock()
 
     if vehicle == 0 then
         local coords = GetEntityCoords(ped)
-        -- Search nearest vehicle within MaxVehicleDistance
+        
         local vehicles = GetGamePool('CVehicle')
         local bestVeh = 0
         local bestDist = Config.MaxVehicleDistance + 0.01
@@ -154,7 +154,7 @@ function TryToggleLock()
 
     local vehicleNet = VehToNet(vehicle)
     local lockStatus = GetVehicleDoorLockStatus(vehicle)
-    -- 1 = unlocked, 2 = locked (commonly used)
+   
     local newLock = (lockStatus == 1)
 
     local function proceed(hasKey)
